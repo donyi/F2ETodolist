@@ -1,0 +1,311 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.wrap{
+	margin:0 auto;
+	width: 1000px;
+	background: #E1E1E1;
+}
+
+.menu{
+	height: 76px;
+	
+	background: #4A90E2;
+		
+
+}
+
+.menu li{
+	float:left;
+	margin-top: 25px;
+	margin-left: 175px
+
+}
+.menu li a{
+	
+	text-decoration:none;
+	color:#00408B;
+	font-size:24px;
+
+	
+}
+
+.add{
+	margin-left: 175px;
+	margin-top:5px;
+	width: 620px;
+	height: 65px;
+	font-size: 24px;
+	
+}
+
+.to-do-items{
+	width: 620px;
+	height: 76px;
+	margin-left: 175px;
+	margin-top:5px;
+	background: #F2F2F2;
+	font-size: 24px;
+	box-shadow:0px 1px 3px #F2F2F2;
+	border-radius: 5px 5px 0px 0px;
+	display: none;
+	
+}
+.to-do-items .check{
+	font-size: 24px; 
+	margin:25px; 
+	width: 20px;
+	height: 20px;
+}
+.to-do-items .important{
+	margin-left: 180px;
+		
+	
+}
+
+.to-do-items .edit{
+	font-size:24px;
+	color:#4A90E2; 
+	margin-left: 10px;
+}
+
+.content{
+	width: 620px;
+	height: 519px;
+	background: #F2F2F2;
+	margin-left: 175px;
+	margin-top:3px;
+	box-shadow:0px 1px 3px #F2F2F2;
+	border-radius: 0px 0px 5px 5px;
+	display: none;
+}
+.content .deadline-icon{
+	margin: 30px 5px 3px 70px;
+	font-size: 18px
+}
+.content .text{
+	font-size: 20px;
+}
+.content .date{
+	width :162px; 
+	height: 35px;
+	margin-left: 95px;
+}
+.content .time{
+	width :162px; 
+	height: 35px;
+}
+
+.content .file-icon{
+	margin: 30px 7px 3px 70px;
+	font-size: 18px;
+}
+.content .file{
+	color:#fff;
+	background: #C8C8C8;
+	width: 32px;
+	height: 32px; 
+	margin-left: 95px;
+	
+}
+
+.content .comment-icon{
+	margin: 30px 7px 3px 70px;
+	font-size: 18px;
+}
+.content .memo{
+	margin-left: 95px; 
+	border-radius: 5px;
+}
+
+.content .cancel{
+	width: 308px;
+	height: 60px;
+	border-radius: 0px 0px 0px 5px;
+	background: #fff;
+	font-size: 24px;
+	color: #D0021B;
+}
+.content .add-task{
+	width: 308px;
+	height: 60px; 
+	border-radius: 0px 0px 5px 0px;
+	background: #4A90E2;
+	margin-top: 67px;
+	font-size: 24px;
+	color: #FFF;
+}
+
+.agency-matters{
+	width: 620px;
+	height: 102px;
+	background: #FFF2DC;
+	margin-top: 20px;
+	margin-left: 175px;
+	border-radius: 5px;
+	font-size: 24px;
+	box-shadow:0px 1px 3px #FFF2DC;	
+}
+
+.agency-matters .check{
+	font-size: 24px; 
+	margin:25px; width: 20px;
+	height: 20px;
+	
+}
+.agency-matters .important{
+	margin-left: 180px;
+	color: #F5A623;
+	width: 24px;
+	height: 24px;	
+}
+.agency-matters .edit{	
+	margin-left: 10px;	
+}
+
+.agency-matters .deadline-icon{
+	margin-top: 5px;
+	margin-left: 75px;
+	filter:brightness(2)
+	
+}
+.agency-matters .file-icon{
+	margin-left: 10px;
+	filter:brightness(2)
+}
+.agency-matters .comment-icon{
+	margin-left: 10px;
+	filter:brightness(2)
+}
+.agency-matters .file-icon2{
+	margin-left: 70px;
+	filter:brightness(2)
+}
+
+
+
+
+.agency-matters2{
+	width: 620px;
+	height: 102px;
+	background: #F2F2F2;
+	margin-top: 20px;
+	margin-left: 175px;
+	border-radius: 5px;
+	font-size: 24px;
+	box-shadow:0px 1px 3px #FFF2DC;	
+}
+
+.agency-matters2 .check{
+	font-size: 24px; 
+	margin:25px; 
+	width: 20px;
+	height: 20px;
+	
+}
+.agency-matters2 .important{
+	margin-left: 180px;
+}
+
+.agency-matters2 .edit{	
+	margin-left: 10px;	
+}
+
+.agency-matters2 .deadline-icon{
+	margin-top: 5px;
+	margin-left: 75px;
+	filter:brightness(2)
+}
+.agency-matters2 .file-icon{
+	margin-left: 75px;
+	filter:brightness(2)
+	
+}
+
+.agency-matters3{
+	width: 620px;
+	height: 76px;
+	margin-left: 175px;
+	margin-top:5px;
+	background: #F2F2F2;
+	font-size: 24px;
+	box-shadow:0px 1px 3px #F2F2F2;
+	border-radius: 5px 5px 0px 0px;
+	text-decoration: line-through;
+	
+}
+.agency-matters3 .check{
+	font-size: 24px; 
+	margin:25px; 
+	width: 20px;
+	height: 20px;
+
+}
+.agency-matters3 .important{
+	margin-left: 180px;
+	
+	
+	
+}
+
+.agency-matters3 .edit{
+	font-size:24px;
+	
+	margin-left: 10px;
+	
+}
+
+.all{
+	margin-left:200px;
+	font-size: 24px; 
+	filter:brightness(3)
+}
+
+
+

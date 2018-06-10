@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://demonstration.abgne.tw/jquery/plugins/0033/js/jquery.dragsort.js"></script>
+	
+	<style type="text/css">
+		.menu li a.active{
+			border-bottom: 5px solid black;
+			
+			color: #FFF;
+		}
+		
+		.here{
+			
+			font-size: 24px;
+			width: 248px;
+			height: 28px;
+
+		}
+	
+		
+		
+
+		.load{
+			width: 100px;
+			margin-left: 25px;
+			white-space:nowrap;
+		}		
+		
+
+	</style>
+
+</head>
+<body>
+	<div class="wrap">
+		
+		
+		<div class="menu">
+			<ul class="o">
+				<li><a href="#">My Tasks</a></li>
+				<li><a href="#">In Progress</a></li>
+				<li><a href="#">Completed</a></li>
+			</ul>		
+		</div>
+		<input type="text" placeholder="　＋　Add Task" class="add" id="add">
+
+		<div class="to-do-items" id="to-do-items" >
+			
+			<input type="checkbox" class="check" >
+			<i id="thing" class="thing"></i> 
+			<span class="glyphicon glyphicon-star-empty important" ></span>
+			<i class="material-icons edit" >edit</i>
+		</div>
+		<div class="content" id="content">
+			<span class="glyphicon glyphicon-calendar deadline-icon" ></span>
+			<label for="Deadline" class="text">Deadline</label>
+			<br>
+			<input id="Deadline" type="text" placeholder="yyyy/mm/dd" class="date" >
+			<input type="text" placeholder="hh:mm" class="time" >
+			<br>
+
+			<i class="fa fa-file-o file-icon" ></i>
+			<label for="File" class="text">File</label>
+			<br>			
+			<input id="load"  type="file" style="display: none">	
+			<input id="file" type="button" value="+" class="file" onclick="load.click()">
+					
+			<br>
+			<i class="fa fa-commenting-o comment-icon" ></i>
+			<label for="Comment" class="text">Comment</label>
+			<br>
+			<textarea name="" id="comment" cols="60" rows="7" placeholder="Tyep your memo here..." class="memo"></textarea>
+			<br>
+			<input type="button" value="X Cancel" class="cancel">
+			<input type="button" value="＋ Add Task" class="add-task" id="ta">
+		</div>
+
+			<ul id="move" class="move">
+				<li>
+					<div id="box" class="box" ></div>		
+				</li>	
+				
+				<li>
+					<div class="agency-matters">
+						<input type="checkbox" class="check" >Type Something Here...
+						<span class="glyphicon glyphicon-star important" ></span>
+						<i class="material-icons edit" >edit</i>
+						<br>
+						<span class="glyphicon glyphicon-calendar deadline-icon" >5/14</span>
+						
+						<i class="fa fa-file-o file-icon" ></i>
+						<i class="fa fa-commenting-o comment-icon" ></i>
+					</div>
+				</li>
+
+				<li>
+					<div class="agency-matters">
+						<input type="checkbox" class="check" >Type Something Here...
+						<span class="glyphicon glyphicon-star important" ></span>
+						<i class="material-icons edit" >edit</i>
+						<br>
+						
+						
+						<i class="fa fa-file-o file-icon2" ></i>
+						<i class="fa fa-commenting-o comment-icon" ></i>
+
+					</div>
+				</li>
+				
+				<li>
+					<div class="agency-matters2">
+						<input type="checkbox" class="check" >Type Something Here...
+						<span class="glyphicon glyphicon-star-empty important" ></span>
+						<i class="material-icons edit" >edit</i>
+						<br>
+						<span class="glyphicon glyphicon-calendar deadline-icon" >2019/6/18</span>
+						
+					</div>
+				</li>
+
+				<li>
+					<div class="agency-matters2">
+						<input type="checkbox" class="check" >Type Something Here...
+						<span class="glyphicon glyphicon-star-empty important" ></span>
+						<i class="material-icons edit" >edit</i>
+						<br>	
+						
+						<i class="fa fa-file-o file-icon" ></i>
+						
+
+					</div>
+				</li>
+			</ul>						
+					<div class="agency-matters3">
+						
+						<input type="checkbox" class="check" >Type Something Here...
+						<span class="glyphicon glyphicon-star-empty important" ></span>
+						<i class="material-icons edit" >edit</i>
+					</div>
+			
+				<div class="all">
+					4 tasks left
+				</div>
+			
+		</div>
+	<script type="text/javascript">
+		var a = document.getElementsByTagName("a");
+		
+		for (var i=0; i<a.length;i++){
+			a[i].onclick=function(){
+				
+				for(var j=0; j<a.length;j++){
+					a[j].className='';
+					
+				}
+				this.className='active';				
+			}
+			
+		}
+		
+		var ad = document.getElementById("add");
+		var tdi=document.getElementById("to-do-items");
+		var ct= document.getElementById("content")
+		var th=document.getElementById("thing");
+		
+		
+		
+		
+	
+		ad.onmouseout=function(){
+			
+			th.innerHTML=ad.value;
+			ad.style.display="none";
+			tdi.style.display="block";
+			ct.style.display="block";
+		}
+		
+		
+
+
+		var at = document.getElementById("ta");
+		
+
+		at.onclick=function(){
+				
+				var box =document.getElementById("box");
+				var div =document.createElement("div");
+				div.className="agency-matters";
+				box.appendChild(div);
+				box.insertBefore(div,box.childNodes[0]);				
+
+				var input=document.createElement("input");
+				input.type="checkbox"
+				input.className="check";							
+				div.appendChild(input);
+								
+				var here=document.createElement("i");
+				here.className="here";
+				here.innerHTML="Type Something Here...";				
+				div.appendChild(here);	
+
+				var star=document.createElement("span");
+				star.className="glyphicon glyphicon-star important";
+				div.appendChild(star);	
+				
+				var pen=document.createElement("i");
+				pen.className="material-icons edit";
+				pen.innerHTML="edit";
+				div.appendChild(pen);
+
+				
+
+				var date =document.createElement("span");
+				date.className="glyphicon glyphicon-calendar deadline-icon";										
+				div.appendChild(date);
+
+				var reservation =document.createElement("i")
+				var t = document.getElementsByClassName("date")
+				reservation.innerHTML = t[0].value;							
+				div.appendChild(reservation);
+
+				
+				
+				var file=document.createElement("i")
+				file.className="fa fa-file-o file-icon";
+				div.appendChild(file);
+
+				var comment=document.createElement("i")
+				var c = document.getElementsByClassName("memo");
+				comment.value=c[0].value;
+				comment.className="fa fa-commenting-o comment-icon"
+				div.appendChild(comment);
+
+				
+
+		}
+		
+		
+		
+
+		
+			
+		//$("div").dragsort({
+        //    dragSelector: "div", 
+        //    dragBetween: true,
+        //    placeHolderTemplate: "<li class='placeHolder'><div></div></li>"
+       	//});
+		
+		
+
+	</script>
+
+		
+
+	</div>
+</body>
+</html>
